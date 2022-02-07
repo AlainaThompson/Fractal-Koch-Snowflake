@@ -17,6 +17,10 @@
 		091975D527ADA0DC009B899E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091975AB27ADA0DA009B899E /* ContentView.swift */; };
 		091975D627ADA0DC009B899E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091975AC27ADA0DC009B899E /* Assets.xcassets */; };
 		091975D727ADA0DC009B899E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091975AC27ADA0DC009B899E /* Assets.xcassets */; };
+		091975E727ADA116009B899E /* Koch-Fractal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091975E627ADA116009B899E /* Koch-Fractal.swift */; };
+		091975E827ADA116009B899E /* Koch-Fractal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091975E627ADA116009B899E /* Koch-Fractal.swift */; };
+		091975EA27ADA1F8009B899E /* KochView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091975E927ADA1F8009B899E /* KochView.swift */; };
+		091975EB27ADA1F8009B899E /* KochView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091975E927ADA1F8009B899E /* KochView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		091975CA27ADA0DC009B899E /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		091975CE27ADA0DC009B899E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		091975D027ADA0DC009B899E /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		091975E627ADA116009B899E /* Koch-Fractal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Koch-Fractal.swift"; sourceTree = "<group>"; };
+		091975E927ADA1F8009B899E /* KochView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KochView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 			children = (
 				091975AA27ADA0DA009B899E /* Fractal_Koch_SnowflakeApp.swift */,
 				091975AB27ADA0DA009B899E /* ContentView.swift */,
+				091975E627ADA116009B899E /* Koch-Fractal.swift */,
+				091975E927ADA1F8009B899E /* KochView.swift */,
 				091975AC27ADA0DC009B899E /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -300,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				091975D427ADA0DC009B899E /* ContentView.swift in Sources */,
+				091975EA27ADA1F8009B899E /* KochView.swift in Sources */,
+				091975E727ADA116009B899E /* Koch-Fractal.swift in Sources */,
 				091975D227ADA0DC009B899E /* Fractal_Koch_SnowflakeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				091975D527ADA0DC009B899E /* ContentView.swift in Sources */,
+				091975EB27ADA1F8009B899E /* KochView.swift in Sources */,
+				091975E827ADA116009B899E /* Koch-Fractal.swift in Sources */,
 				091975D327ADA0DC009B899E /* Fractal_Koch_SnowflakeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
