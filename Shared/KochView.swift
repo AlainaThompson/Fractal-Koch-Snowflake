@@ -32,14 +32,14 @@ struct KochView: View {
 
     }
     
-    /// createCesaroFractalShapeView
+    /// createKochSnowflakeShapeView
     ///
     /// This function ensures that the program will not crash if non-valid input is accidentally entered by the user.
     ///
     /// - Parameters:
     ///   - iterations: number of iterations in the fractal
     ///   - piAngleDivisor: integer that sets the angle as pi/piAngleDivisor so if 2, then the angle is π/2
-    /// - Returns: View With Cesaro Fractal Shape
+    /// - Returns: View With Koch Snowflake Shape
     func createKochFractalShapeView(iterations: Int?, piAngleDivisor: Int?) -> some View {
         
             var newIterations :Int? = 0
@@ -73,9 +73,9 @@ struct KochView: View {
     
 }
 
-/// CesaroFractalShape
+/// KochSnowflakeShape
 ///
-/// calculates the Shape displayed in the Cesaro Fractal View
+/// calculates the Shape displayed in the Koch Snowflake View
 ///
 /// - Parameters:
 ///   - iterations: number of iterations in the fractal
@@ -98,8 +98,8 @@ struct KochFractalShape: Shape {
         // draw from the center of our rectangle
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
         
-        // Offset from center in y-direction for Cesaro Fractal
-        let yoffset = size/(2.0*tan(45.0/180.0*Double.pi))
+        // Offset from center in y-direction for Koch Snowflake
+        let yoffset = size/(3.0*tan(45.0/180.0*Double.pi))
         
         x = center.x - CGFloat(size/2.0)
         y = rect.height/2.0 - CGFloat(yoffset)
@@ -115,7 +115,7 @@ struct KochFractalShape: Shape {
         KochPoints = KochFractalCalculator(fractalnum: iterations, x: x, y: y, size: size, angleDivisor: piAngleDivisor)
         
 
-        // Create the Path for the Cesaro Fractal
+        // Create the Path for the Koch Snowflake
         
         var path = Path()
 

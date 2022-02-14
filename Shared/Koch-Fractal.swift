@@ -11,7 +11,7 @@ import SwiftUI
 
 /// makeline
 ///
-/// Calculates the next vertex in the Cesaro Fractal
+/// Calculates the next vertex in the Koch Snowflake
 ///
 /// - Parameters:
 ///   - distance: distance to travel to next point
@@ -35,7 +35,7 @@ func makeline(distance: Double, angle: CGFloat, x: CGFloat, y: CGFloat) -> [(xPo
 
 /// turn
 ///
-/// Calculates the turn angle in the Cesaro Fractal to get the next point
+/// Calculates the turn angle in the Koch Snowflake to get the next point
 ///
 /// - Returns: the new angle in which to progress the fractal
 ///
@@ -47,9 +47,9 @@ func turn (angle: CGFloat, angleChange: Double) -> CGFloat
 }
 
 
-/// CesaroFractalCalculator
+/// KochSnowflakeCalculator
 ///
-/// Calculates the 4 sided Cesaro Fractal
+/// Calculates the 3 sided Koch Snowflake
 ///
 /// - Parameters:
 ///   - fractalnum: number of times to iterate the fractal
@@ -57,7 +57,7 @@ func turn (angle: CGFloat, angleChange: Double) -> CGFloat
 ///   - y: y value of first vetex
 ///   - size: size of the Fractal
 ///   - angleDivisor: integer that sets the angle as pi/piAngleDivisor so if 2, then the angle is π/2
-/// - Returns: array of x and y points for all of the vertices in the Cesaro Fractal. Used to make the path for the view
+/// - Returns: array of x and y points for all of the vertices in the Koch Snowflake. Used to make the path for the view
 ///
 func KochFractalCalculator(fractalnum: Int, x: CGFloat, y: CGFloat, size: Double, angleDivisor: Int) -> [(xPoint: Double, yPoint: Double)]
 {
@@ -89,9 +89,9 @@ func KochFractalCalculator(fractalnum: Int, x: CGFloat, y: CGFloat, size: Double
     return(allThePoints)
 }
 
-/// calculateCesaroSide
+/// calculateKochSide
 ///
-/// Calculates the Cesaro Fractal from each side of the original 4 sided shape
+/// Calculates the Koch Snowflake from each side of the original 4 sided shape
 ///
 /// - Parameters:
 ///   - angle: current angle
@@ -101,7 +101,7 @@ func KochFractalCalculator(fractalnum: Int, x: CGFloat, y: CGFloat, size: Double
 ///   - myY: x value of current vertex
 ///   - size: size of the Fractal
 ///   - angleDivisor: integer that sets the angle as pi/piAngleDivisor so if 2, then the angle is π/2
-/// - Returns: array of x and y points for all of the vertices in the Cesaro Fractal
+/// - Returns: array of x and y points for all of the vertices in the Koch Snowflake
 ///
 func calculateKochSide(_ angle: inout CGFloat, _ angleChange: inout CGFloat, _ fractalnum: Int, _ myX: inout CGFloat, _ myY: inout CGFloat, _ size: Double, _ angleDivisor: Int) -> [(xPoint: Double, yPoint: Double)] {
     
@@ -117,9 +117,9 @@ func calculateKochSide(_ angle: inout CGFloat, _ angleChange: inout CGFloat, _ f
 }
 
 
-/// CesaroSide
+/// KochSide
 ///
-/// Recursively calculates the Cesaro Fractal by decrementing the fractal number\
+/// Recursively calculates the Koch Snowflake by decrementing the fractal number\
 ///
 /// - Parameters:
 ///   - fractalnum: number of times to iterate the fractal. Counts down to 0
@@ -128,7 +128,7 @@ func calculateKochSide(_ angle: inout CGFloat, _ angleChange: inout CGFloat, _ f
 ///   - angle: angle needed to move to the next vertex
 ///   - size: size of the fractal. Recursively gets smaller.
 ///   - divisorForAngle: integer that sets the angle as pi/piAngleDivisor so if 2, then the angle is π/2
-/// - Returns: array of x and y points for all of the vertices in the Cesaro Fractal
+/// - Returns: array of x and y points for all of the vertices in the Koch Snowflake
 ///
 func KochSide(fractalnum: Int, x: CGFloat, y: CGFloat, angle: CGFloat, size: Double, divisorForAngle: Int) -> [(xPoint: Double, yPoint: Double)] {
     
